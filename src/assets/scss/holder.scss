@@ -1,0 +1,112 @@
+.holder {
+    padding: 160px 0px 140px 0px;
+    
+
+    .slider-arrows {
+        top: 237px;
+        opacity: 0.2;
+    }
+    
+    &__container {
+    }
+ 
+    &__slider {
+    }
+
+    &__slider-item {
+    }
+}
+.holder-slider {
+    &__head {
+        background-repeat: no-repeat;
+        background-position: top left;
+        min-height: 718px;
+    }
+
+    &__subtitle {
+        padding: 132px 0 0px 0px;
+        
+    }
+
+    &__descr {
+        margin-top: -130px;
+        padding: 70px 0px 0px 135px;
+        
+        background-repeat: no-repeat;
+        
+        
+    }
+
+    &__info {
+        padding: 80px 135px 0px 135px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info-item {
+        position: relative;
+    }
+
+    &__info-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 8px;
+        line-height: 22px;
+        transform: rotate(-90deg) translateX(-98%);
+        max-height: 230px;
+        text-align: right;
+        transform-origin: top left;
+        color: rgba(255, 255, 255, 0.507);
+        white-space: nowrap;
+
+    }
+
+    &__info-text{
+        position: relative;
+        padding-left: 40px;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 36px;
+        max-width: 290px;
+        span {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 36px;
+            
+        }
+    }
+
+    &__info-desc {
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 5.25px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    &__btn {
+        &_travel{
+            margin-top: 210px;
+            text-align: center;
+        }
+        &_sleep {
+            margin-top: 225px;
+            text-align: center;
+        }
+
+
+    }
+}
+.descr {
+    &__head {
+        .aerolines {
+            margin-left: 22px;
+            display: inline-block;
+        }
+    }
+}

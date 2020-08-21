@@ -1,0 +1,257 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+// @import "utils/reset";
+
+html {
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #171919;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background-color:transparent;
+  outline: none;
+}
+
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  max-width: $desktopWidth;
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: $tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: $phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: $smPhoneWidth;
+  }
+}
+
+._container{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+
+
+/////////////////////////////
+
+.headline-left {
+  display: block;
+  font-size: 22px;
+  line-height: 32px;
+
+  text-align: right;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.headline-left::before {
+  content: '';
+  width: 80px;
+  height: 1.1px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color:rgba(255, 255, 255, 0.5);
+  margin-right: 23px;
+}
+
+.headline-right {
+  display: block;
+  font-size: 22px;
+  line-height: 32px;
+
+  text-align: left;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.headline-right::after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color:rgba(255, 255, 255, 0.5);
+  margin-left: 23px;
+}
+
+.title {
+  &__decor {
+    left: -49px;
+    font-size: 200px;
+    font-weight: 800;
+    position: relative;
+    color: rgba(255, 255, 255, 0.027);
+  }
+  &__name {
+    position: absolute;
+    top: 0;
+    left: 294px;
+    font-size: 80px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  &__name::before {
+    content: '';
+    width: 80px;
+    height: 1px;
+    background-color: $brend;
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.subtitle {
+  margin-right: 80px;
+  text-align: right;
+  &__head {
+    font-weight: 800;
+    font-size: 40px;
+    span {
+      font-weight: 100;
+    }
+  }
+  &_surf {
+    margin-top: -50px;
+    display: block;
+  }
+}
+
+.button {
+  height: 80px;
+}
+
+.button-link {
+  width: 100%;
+  display: block;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 36px;
+  color: #ffffff;
+  span {
+      background-color: $brend;
+      padding: 17px 52px 17px 17px;
+      position: relative;
+      margin-left: 10px;
+      img {
+          position: absolute;
+          right: 22px;
+          top: 30px;
+          animation-iteration-count: infinite;
+      }
+  }
+  span::before {
+      content:'';
+      height: 1px;
+      width: 20px;
+      background-color: #fff;
+      position: absolute;
+      top: 40px;
+      left: -10px;
+  }
+}
+
+.stars-list {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 28px;
+  &__item {
+    display: inline-block;
+    margin-left: -15px;
+  }
+}
+
+// Modules:
+// example: @import "modules/my-module.scss";
+@import "quantity.scss";
+@import "header.scss";
+@import "surf.scss";
+@import "holder.scss";
+@import "travel.scss";
+@import "sleep.scss";
+@import "shop.scss";
+@import "footer.scss";
+
+@import "media.scss";
+

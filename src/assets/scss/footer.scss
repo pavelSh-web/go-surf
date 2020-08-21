@@ -1,0 +1,13 @@
+.footer {
+    padding-top: 460px ;
+    text-align: center;
+    & .licence {
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1.05px;
+        line-height: 14px;
+        margin-bottom: 33px;
+        display: block;
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
